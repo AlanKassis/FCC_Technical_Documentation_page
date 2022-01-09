@@ -1,0 +1,39 @@
+html {
+    font:10px;
+    background-color: aqua;
+}
+
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+    /* justify-content: start; */
+    align-items:flex-start;
+    width:100%;
+    height: 100vh;
+    background-color: cadetblue;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: column;
+    background-color: khaki;
+    width:15vw;
+    height: 100%;
+}
+#navbar > * {
+ background-color: lightsalmon;
+ list-style: none;
+
+}
+ 
+.nav-link {
+ width: 100%;
+ border:2px solid limegreen;
+}
+#main-doc {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 85vw;
+    background-color: lightcoral;
+}
