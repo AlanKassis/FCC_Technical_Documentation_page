@@ -20,9 +20,9 @@
         <main id="main-doc">
             <!-- User Story #2: Within the #main-doc element, I can see several section elements, each with a class of main-section. There should be a minimum of 5. -->
             <!-- User Story #4: Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding id="JavaScript_and_Java"). -->
-            <section class="main-section" id="introduction">
+            <section class="main-section" id="Introduction">
                 <!-- User Story #3: The first element within each .main-section should be a header element which contains text that describes the topic of that section. -->
-                <h1>Introduction</h1>
+                <header>Introduction</header>
                 <p>
                     JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight
                     language. Inside a host environment (for example, a web browser), JavaScript can be connected to the
@@ -45,8 +45,8 @@
                 </ul>
             </section>
             <!-- User Story #5: The .main-section elements should contain at least 10 p elements total (not each). -->
-            <section class="main-section" id="what_you_should_already_know">
-                <h1>What you should already know</h1>
+            <section class="main-section" id="What_you_should_already_know">
+                <header>What you should already know</header>
                 <p>
                     This guide assumes you have the following basic background:
                 </p>
@@ -57,9 +57,9 @@
                         the main page about JavaScript.</li><br>
                 </ul>
             </section>
-            <section class="main-section" id="javaScript_and_java">
+            <section class="main-section" id="JavaScript_and_Java">
                 <!-- User Story #6: The .main-section elements should contain at least 5 code elements total (not each). -->
-                <h1>JavaScript and Java</h1>
+                <header>JavaScript and Java</header>
                 <p>JavaScript and Java are similar in some ways but fundamentally different in some others.
                     The JavaScript language resembles Java but does not have Java's static typing and strong type
                     checking.
@@ -85,9 +85,9 @@
                 </p>
                 </p>
             </section>
-            <section class="main-section" id="hello_world">
+            <section class="main-section" id="Hello_World">
                 <!-- User Story #7: The .main-section elements should contain at least 5 li items total (not each). -->
-                <h1>Hello World</h1>
+                <header>Hello World</header>
                 <p>
                     To get started with writing JavaScript, open the Scratchpad and write your first "Hello world"
                     JavaScript code:
@@ -98,8 +98,8 @@
                 </code>
 
             </section>
-            <section class="main-section" id="variables">
-                <h1>Variables</h1>
+            <section class="main-section" id="Variables">
+                <header>Variables</header>
                 <p>You use variables as symbolic names for values in your application. The names of variables, called
                     identifiers, conform
                     to certain rules.
@@ -112,8 +112,54 @@
                     You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the
                     Unicode escape sequences
                     as characters in identifiers. Some examples of legal names are Number_hits, temp99, and _name.
-
+                    
                 </p>
+            </section>
+            <section class="main-section" id="Declaring_variables">
+                <header>Declaring variables</header>
+                <p> You can declare a variable in three ways.<br><br>
+                    With the kyeword var. For example,
+                </p>
+                <code>
+                    var x = 42.
+                </code>
+                <p>
+                    This Syntax can be used to declare both local and global variables. 
+                    <br> <br>
+                    By simply assigning it a value. For example, 
+                </p>
+                <code>
+                    x = 42
+                </code>
+                <p> This always declares a global variable. It generates a strict JavaScript warning. You shouldn't use 
+                    this variant.
+                    <br> <br>
+                    With the keyword let. For example, 
+                </p>
+                <code>
+                    let y = 13.
+                </code>
+                <p> This syntax can be used to declare a block scope local variable. See Variable scope below.</p>
+            </section>
+            <section class="main-section" id="Variable_scope">
+                <header>Variable scope</header>
+                <p>
+                    When you declare a variable outside of any function, it is called a global variable, because it is available to any
+                    other code in the current document. When you declare a variable within a function, it is called a local variable,
+                    because it is available only within that function.
+                    <br><br>
+                    JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared within a block is
+                    local to the function (or global scope) that the block resides within. For example the following code will log 5,
+                    because the scope of x is the function (or global context) within which x is declared, not the block, which in this case
+                    is an if statement.
+                </p>
+                <code>
+                    if (true) { var x = 5; } console.log(x); // 5
+                </code>
+                <p> This behavior changes, when using the let declaration introduced in ECMAScript 2015 </p>
+                <code>
+                    if (true) { let y = 5; } console.log(y); // ReferenceError y is not defined
+                </code>
             </section>
         </main>
         <!-- User Story #8: I can see a nav element with a corresponding id="navbar". -->
@@ -126,14 +172,16 @@
             <ul id="nav-ul">
                 <!-- User Story #10: Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be one for every element with the class main-section. -->
                 <!-- User Story #12: Each element with the class of nav-link should contain text that corresponds to the header text within each section (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world"). -->
-                <li><a href="" class="nav-link">Introduction</a></li>
-                <li><a href="" class="nav-link">What you should already know</a></li>
-                <li><a href="" class="nav-link">JavaScript and Java</a></li>
-                <li><a href="" class="nav-link">Hello World</a></li>
-                <li><a href="" class="nav-link">Variables</a></li>
+                <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+                <li><a href="#What_you_should_already_know" class="nav-link">What you should already know</a></li>
+                <li><a href="#JavaScript_and_Java" class="nav-link">JavaScript and Java</a></li>
+                <li><a href="#Hello_World" class="nav-link">Hello World</a></li>
+                <li><a href="#Variables" class="nav-link">Variables</a></li>
+                <li><a href="#Declaring_variables" class="nav-link">Declaring variables</a></li>
+                <li><a href="#Variable_scope" class="nav-link">Variable scope</a></li>
             </ul>
         </nav>
-        <script src="" async defer></script>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" async defer></script>
 </body>
 
 </html>

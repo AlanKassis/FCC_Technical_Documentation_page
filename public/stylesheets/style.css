@@ -39,6 +39,10 @@ height:100vh;
 
 
 }
+ header {
+     font-size: larger;
+     font-weight: 600;
+ }
  header > h1 {
      padding:1rem;
  }
@@ -72,6 +76,7 @@ a {
     margin-left:calc(350px);
     padding-right: 2rem;
     height:100%;
+    padding-top: 1rem;
     padding-left: 1rem;
 }
  code {
